@@ -1,0 +1,9 @@
+{
+  "parser": "babel-eslint",
+  "extends": "sedona/angular-es6",
+    "rules":{
+        // ne fonctionne pas bien par exemple lève une alerte pour le code if (bool) {return true} else {return false}
+        "no-else-return":"warn",
+        "lines-around-comment":"off"
+    }
+}

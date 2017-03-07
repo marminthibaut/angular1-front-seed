@@ -1,0 +1,27 @@
+<!-- Template pour la démo de la page d'administration.
+Le but de cette page est d'illuster comment effectuer des appels REST en fonction des libs utilisées. -->
+<div class="font-size:250%">Admin</div>
+<!-- Choix de la méthode d'appel. -->
+<md-input-container>
+    <label>Method</label>
+    <!-- Combo des méthodes d'appels. -->
+    <md-select ng-model="$ctrl.method">
+        <md-option ng-repeat="method in $ctrl.methodValues" ng-value="method">
+            {{method}}
+        </md-option>
+    </md-select>
+</md-input-container>
+<!-- Appel de la ressource REST -->
+<button ng-click="$ctrl.getMessage()" type="button">Get a message !</button>
+
+<!-- Affichage du message de chargement -->
+<div layout="row" layout-align="start" flex ng-bind="$ctrl.message"></div>
+
+<!-- Affichage du résultat de l'appel -->
+<div layout="row" layout-align="end" flex>
+    <a ui-sref="admin.builder" href="">Builder</a>
+    <a ui-sref="admin.users" href="">Users</a>
+</div>
+
+<!-- Injection de la vue Angular. -->
+<ui-view></ui-view>

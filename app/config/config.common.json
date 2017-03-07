@@ -1,0 +1,15 @@
+{
+    "debug": true,
+    "html5mode": {
+        "enabled": true,
+        "requireBase": false
+    },
+    "mdTheme": {
+        "name": "dark-red",
+        "bg": "purple",
+        "color": "dark"
+    },
+    "api": {
+        "root" : "/backend-web"
+    }
+}

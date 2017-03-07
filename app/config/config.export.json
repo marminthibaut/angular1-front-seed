@@ -1,0 +1,10 @@
+{
+    "debug": "[DEBUG_MODE]",
+    "html5mode": {
+        "enabled": "[ENABLE_HTML5]",
+        "requireBase": "[REQUIRE_BASE]"
+    },
+    "api": {
+        "root" : "[API_ROOT]"
+    }
+}

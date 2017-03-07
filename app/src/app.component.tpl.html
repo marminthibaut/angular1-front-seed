@@ -1,0 +1,41 @@
+<!-- Template principal pour la page d'accueil. -->
+<md-toolbar class="md-hue-2">
+    <!-- Bouton d'activation du menu. -->
+    <div class="md-toolbar-tools">
+        <!-- Affichage / masquage de menu. -->
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="$ctrl.toggleLeftMenu()">
+            <md-icon>menu</md-icon>
+        </md-button>
+        <img src="assets/images/logo.png" alt="logo HM"/>
+    </div>
+</md-toolbar>
+<section layout="row" flex>
+    <!-- Menu principal. -->
+    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="main-left">
+        <md-content layout-padding>
+            <md-list>
+                <!-- Retour à la page d'accueil. -->
+                <md-list-item ui-sref="home" ng-click="$ctrl.toggleLeftMenu()">
+                    home
+                </md-list-item>
+                <!-- Affichage de la page dashboard. -->
+                <md-list-item ui-sref="dashboards" ng-click="$ctrl.toggleLeftMenu()">
+                    dashboards
+                </md-list-item>
+                <!-- Affichage de la page formulaire. -->
+                <md-list-item ui-sref="forms" ng-click="$ctrl.toggleLeftMenu()">
+                    forms
+                </md-list-item>
+                <!-- Affichage de la page d'administration. -->
+                <md-list-item ui-sref="admin" ng-click="$ctrl.toggleLeftMenu()">
+                    admin
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+    <md-content flex layout-padding>
+        <div layout="column" layout-fill layout-align="top center">
+            <ui-view class="content-area"></ui-view>
+        </div>
+    </md-content>
+</section>
